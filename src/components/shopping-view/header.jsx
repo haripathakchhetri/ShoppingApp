@@ -10,7 +10,6 @@ import { Avatar, AvatarFallback } from "../ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { logoutUser } from "../../store/auth-slice";
 
-
 function HeaderRightContent() {
 
   const { user } = useSelector(state => state.auth);
@@ -20,7 +19,6 @@ function HeaderRightContent() {
   function handleLogout() {
     dispatch(logoutUser());
   }
-
   return <div className="flex lg:items-center lg:flex-row flex-col gap-4">
     <Button variant="outline" size="icon">
       <ShoppingCart className="w-6 h-6" />
