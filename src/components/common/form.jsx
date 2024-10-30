@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 
 
-const CommonForm = ({ formControls, formData, setFormData, onSubmit, buttonText }) => {
+const CommonForm = ({ formControls, formData, setFormData, onSubmit, buttonText, isBtnDisabled }) => {
 
   function renderInputsByComponentType(getControlItem) {
     let element = null;
@@ -108,7 +108,7 @@ const CommonForm = ({ formControls, formData, setFormData, onSubmit, buttonText 
 
       </div>
 
-      <Button type="submit" className="mt-2 w-full">{buttonText || 'Submit'}</Button>
+      <Button disabled={isBtnDisabled} type="submit" className="mt-2 w-full">{buttonText || 'Submit'}</Button>
 
     </form>
   )
